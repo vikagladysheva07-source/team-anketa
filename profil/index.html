@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Профиль роли · Ассистент</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07070D;--ivory:#F2EDE2;--muted:#8E8A98;--id:rgba(255,255,255,.84);--id2:rgba(255,255,255,.62);--line:rgba(242,237,226,.10);--glass:linear-gradient(165deg,rgba(255,255,255,.055),rgba(255,255,255,.012));--ring:rgba(155,111,232,.42);--mono:'SFMono-Regular',Menlo,Consolas,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ivory);-webkit-font-smoothing:antialiased;line-height:1.6}
+.orb{position:fixed;border-radius:50%;filter:blur(110px);pointer-events:none;z-index:-1}
+.o1{width:620px;height:620px;top:-200px;right:-200px;background:radial-gradient(circle,rgba(155,111,232,.30),rgba(91,47,190,.08) 70%)}
+.o2{width:480px;height:480px;bottom:-180px;left:-200px;background:radial-gradient(circle,rgba(91,47,190,.30),rgba(91,47,190,.04) 70%)}
+main{max-width:860px;margin:0 auto;padding:88px 32px 120px}
+
+/* hero */
+.hero{text-align:center;margin-bottom:72px}
+.pill{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;border-radius:100px;border:1px solid var(--ring);background:var(--glass);box-shadow:0 0 18px -6px rgba(155,111,232,.4);margin-bottom:26px}
+@keyframes flow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+h1{display:inline-block;font-size:clamp(38px,6vw,56px);font-weight:900;line-height:1.02;letter-spacing:-.03em;text-transform:uppercase;background:linear-gradient(110deg,#FFFFFF 0%,#E8DFFF 18%,#C4A4FF 34%,#9B6FE8 48%,#C4A4FF 62%,#FFFFFF 78%,#E8DFFF 90%,#9B6FE8 100%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:flow 9s ease-in-out infinite;filter:drop-shadow(0 0 28px rgba(155,111,232,.22));padding-top:6px}
+@media (prefers-reduced-motion:reduce){h1{animation:none}}
+.sub{text-wrap:balance;margin:18px auto 0;font-size:18px;color:var(--id);font-weight:500}
+.meta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px}
+.meta span{font-size:13px;color:var(--id2);padding:8px 14px;border-radius:12px;background:var(--glass);border:1px solid var(--line)}
+.meta b{color:var(--ivory);font-weight:600}
+
+/* sections */
+section{margin-top:64px}
+.label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+h2{text-wrap:balance;font-size:clamp(22px,3vw,28px);font-weight:800;letter-spacing:-.01em;text-transform:uppercase;line-height:1.15;margin-bottom:18px}
+p{color:var(--id);font-size:16px}
+p+p{margin-top:12px}
+.card{position:relative;padding:24px 26px;border-radius:18px;background:var(--glass);border:1px solid var(--line);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 28px 60px -38px rgba(91,47,190,.4)}
+.card::after{content:"";position:absolute;left:28px;right:28px;top:-1px;height:1px;background:linear-gradient(90deg,transparent,rgba(155,111,232,.38),transparent)}
+.card.accent{border-color:rgba(155,111,232,.32);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 0 40px -20px rgba(155,111,232,.35),0 28px 60px -34px rgba(91,47,190,.45)}
+.grid{display:grid;gap:14px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.big{font-size:34px;font-weight:900;letter-spacing:-.02em;line-height:1}
+.card h3{font-size:16px;font-weight:700;margin:10px 0 6px}
+.card small{display:block;font-size:14px;line-height:1.55;color:var(--id2)}
+ul.list{list-style:none;display:flex;flex-direction:column;gap:10px}
+ul.list li{position:relative;padding-left:22px;color:var(--id);font-size:15.5px}
+ul.list li::before{content:"";position:absolute;left:4px;top:.62em;width:7px;height:7px;border-radius:50%;background:rgba(155,111,232,.7);box-shadow:0 0 10px rgba(155,111,232,.5)}
+ul.list b{color:var(--ivory)}
+.note{margin-top:14px;font-size:14px;color:var(--id2)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:4px 9px;border-radius:8px;border:1px dashed rgba(242,237,226,.18);margin-left:8px;vertical-align:middle}
+
+/* tables */
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:15px}
+.tbl th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;text-align:left;padding:0 14px 12px}
+.tbl td{padding:14px;color:var(--id);border-top:1px solid var(--line);vertical-align:top}
+.tbl td:first-child{color:var(--ivory);font-weight:600}
+.tbl .num{text-align:center;white-space:nowrap}
+.tbl tr.total td{font-weight:700;color:var(--ivory)}
+
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.plan .price{font-size:30px;font-weight:900;letter-spacing:-.02em;margin:6px 0 2px}
+.plan .price span{font-size:16px;font-weight:600;color:var(--id2);margin-left:4px}
+.plan ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px}
+.plan li{display:flex;justify-content:space-between;gap:10px;font-size:14.5px;color:var(--id2);padding-bottom:8px;border-bottom:1px solid var(--line)}
+.plan li b{color:var(--ivory);font-weight:700;white-space:nowrap}
+.plan .extra{margin-top:12px;font-size:13.5px;color:var(--id2);line-height:1.5}
+
+/* steps */
+.steps{display:flex;flex-direction:column;gap:12px;counter-reset:s}
+.step{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start}
+.step i{counter-increment:s;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:700;font-size:15px;background:rgba(255,255,255,.04);border:1px solid var(--ring);box-shadow:0 0 14px rgba(155,111,232,.25)}
+.step i::before{content:counter(s)}
+.step h3{margin-top:0}
+
+footer{margin-top:80px;text-align:center;font-size:13px;color:var(--muted)}
+
+@media(max-width:700px){
+  main{padding:56px 20px 80px}
+  .hero{margin-bottom:48px}
+  .sub{font-size:16.5px}
+  .g3,.g2,.plans{grid-template-columns:1fr}
+  .card{padding:20px}
+  section{margin-top:48px}
+  .tbl thead{display:none}
+  .tbl,.tbl tbody,.tbl tr,.tbl td{display:block;width:100%}
+  .tbl tr{padding:14px 0;border-top:1px solid var(--line)}
+  .tbl tr:first-child{border-top:0;padding-top:0}
+  .tbl td{border:0;padding:3px 0}
+  .tbl td.num{text-align:left}
+  .tbl td[data-l]::before{content:attr(data-l) " · ";color:var(--muted);font-size:13px}
+  .step{grid-template-columns:36px 1fr;gap:12px}
+  .step i{width:34px;height:34px;font-size:14px}
+}
+h2 .tag{display:block;width:fit-content;margin:10px 0 0;font-family:var(--mono);letter-spacing:.1em}
+/* темнее: фиолетовый только намёком */
+.o1{opacity:.75}.o2{opacity:.7}
+h1{filter:drop-shadow(0 0 22px rgba(155,111,232,.18))}
+.card{background:linear-gradient(165deg,rgba(255,255,255,.05),rgba(255,255,255,.01))}
+.card.accent,.plan.accent{background:radial-gradient(120% 70% at 50% 0%,rgba(91,47,190,.12),transparent 60%),linear-gradient(165deg,rgba(255,255,255,.05),rgba(255,255,255,.01))}
+.pill{border-color:rgba(242,237,226,.16);box-shadow:none;color:var(--id2)}
+.card{background:linear-gradient(165deg,rgba(255,255,255,.035),rgba(255,255,255,.008));border-color:rgba(242,237,226,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 24px 50px -36px rgba(0,0,0,.9)}
+.card::after{display:none}
+.card.accent{border-color:rgba(242,237,226,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 24px 50px -36px rgba(0,0,0,.9)}
+.step i{border-color:rgba(242,237,226,.22);box-shadow:none}
+ul.list li::before{background:rgba(242,237,226,.55);box-shadow:none}
+.plan.accent{border-color:rgba(155,111,232,.28)}
+.hero{margin-bottom:56px}
+section{margin-top:56px}
+@media(max-width:700px){section{margin-top:44px}}
+html{background:#07070D}
+body{background:transparent}
+</style>
+</head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div>
+<main>
+
+<header class="hero">
+  <div class="pill">Внутренний документ</div><br>
+  <h1>Профиль роли</h1>
+  <p class="sub">Ассистент · контент трёх направлений</p>
+</header>
+
+<section>
+  <p class="label">Описание роли</p>
+  <h2>Ассистент</h2>
+  <div class="card accent">
+    <p>Ассистент ведёт контент трёх направлений: личного бренда Виктории Гладышевой, компании WIKKI.OCEAN и приложения VOLYO. Готовит сценарии, монтирует и публикует ролики, делает карусели, ведёт контент-план, собирает цифры по площадкам.</p>
+    <p>Роль с ростом до руководителя контента трёх направлений.</p>
+  </div>
+</section>
+
+<section>
+  <p class="label">Зоны ответственности</p>
+  <h2>Три направления</h2>
+  <div class="grid g3">
+    <div class="card"><div class="big">50%</div><h3>Личный бренд и запуски</h3><small>Сценарии по моим темам, монтаж роликов, посты-карусели, публикация в Instagram и дубль роликов в YouTube Shorts и TikTok, помощь в запусках обучений</small></div>
+    <div class="card"><div class="big">25%</div><h3>WIKKI.OCEAN</h3><small>Ролики через видео-конвейер, посты-карусели, публикация, дубль роликов в YouTube Shorts и TikTok, посты в LinkedIn</small></div>
+    <div class="card"><div class="big">25%</div><h3>VOLYO</h3><small>Ролики через видео-конвейер, посты-карусели, публикация, дубль роликов в YouTube Shorts и TikTok</small></div>
+  </div>
+  <p class="note">Общее для всех трёх: контент-план на неделю, таблица цифр по площадкам, отчёт раз в неделю.</p>
+</section>
+
+<section>
+  <p class="label">Полномочия</p>
+  <h2>Кто что решает</h2>
+
+  <div class="grid g3">
+    <div class="card"><h3>Делаешь сама</h3><small>Монтаж, публикация, перевыкладка, оформление, контент-план, таблица цифр</small></div>
+    <div class="card"><h3>Готовишь на утверждение</h3><small>Сценарии, тексты постов, всё, что выходит от моего имени или говорит о продуктах и ценах</small></div>
+    <div class="card"><h3>Только я</h3><small>Темы и рубрики, позиционирование, продажи и переговоры, ответы клиентам по сделкам</small></div>
+  </div>
+</section>
+
+<section>
+  <p class="label">Инструменты</p>
+  <h2>На чём работаем</h2>
+  <div class="card">
+    <ul class="list">
+      <li><b>Claude</b>: сценарии, тексты, разбор цифр. Отдельный проект с инструкцией соберём на первой неделе.</li>
+      <li><b>Видео-конвейер</b>: ролики WIKKI.OCEAN и VOLYO из готового сценария. Сначала ты готовишь сценарии, а сборку запускаю я, потом научу тебя.</li>
+      <li><b>WIKKI.MANAGEMENT</b>: платформа управления компанией. Задачи, контент-план, статусы. Доступ без раздела финансов.</li>
+      <li><b>Площадки</b>: Instagram, YouTube, TikTok, LinkedIn. Каждый ролик выходит в Instagram и дублируется в YouTube Shorts и TikTok. Telegram-канал веду я.</li>
+    </ul>
+    <p class="note">Блоги WIKKI.OCEAN и VOLYO выходят на английском. Где понадобится проверка текста, решим по твоей анкете.</p>
+  </div>
+</section>
+
+<section>
+  <p class="label">Режим работы</p>
+  <h2>35–40 часов в неделю</h2>
+  <div class="card">
+    <p>Пять дней по 7–8 часов, удалённо, время внутри дня гибкое. Из них около 10 часов в неделю уходит на обучение: навыки сейчас на начальном уровне, и учиться ты будешь в рабочее время, а не сверху. Максимальный план требует большей вовлечённости, около 45 часов в неделю, и оплачивается выше.</p>
+    <table class="tbl" style="margin-top:18px">
+      <thead><tr><th>Задача</th><th class="num">В день</th></tr></thead>
+      <tbody>
+        <tr><td>Два ролика личного бренда: монтаж, обложка, публикация, дубль</td><td class="num" data-l="в день">2,5 ч</td></tr>
+        <tr><td>Три ролика через конвейер: сценарий, проверка, публикация, дубль</td><td class="num" data-l="в день">1,5 ч</td></tr>
+        <tr><td>Карусель и пост в LinkedIn</td><td class="num" data-l="в день">1 ч</td></tr>
+        <tr><td>Контент-план, цифры, отчёт</td><td class="num" data-l="в день">1 ч</td></tr>
+        <tr><td>Обучение по плану ниже</td><td class="num" data-l="в день">2 ч</td></tr>
+        <tr class="total"><td>Итого</td><td class="num" data-l="в день">8 ч</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Раскладка дня рассчитана на средний план. Публикации выходят в согласованные часы. На мои сообщения в рабочие дни отвечаешь в течение 2 часов.</p>
+  </div>
+</section>
+
+<section>
+  <p class="label">Обучение</p>
+  <h2>План на первый месяц</h2>
+  <div class="steps">
+    <div class="step"><i></i><div class="card"><h3>Неделя 1 · Основа</h3><small>Проект в Claude с инструкцией, сценарии по шаблону, монтаж роликов по готовому стилю, работа в WIKKI.MANAGEMENT. Обучению отдаём половину дня.</small></div></div>
+    <div class="step"><i></i><div class="card"><h3>Неделя 2 · Видео-конвейер</h3><small>Сценарии для роликов WIKKI.OCEAN и VOLYO, проверка готовых роликов, публикация на английском.</small></div></div>
+    <div class="step"><i></i><div class="card"><h3>Неделя 3 · Цифры</h3><small>Статистика площадок, таблица метрик, первый отчёт с выводами: что повторить, что убрать.</small></div></div>
+    <div class="step"><i></i><div class="card"><h3>Неделя 4 · Самостоятельность</h3><small>Контент-план на неделю вперёд без моих подсказок, предложения по темам на основе цифр.</small></div></div>
+  </div>
+</section>
+
+<section>
+  <p class="label">Планы и оплата</p>
+  <h2>Три плана</h2>
+  <p>Оплата за первый месяц фиксированная и зависит от выполненного плана. Главное в первом месяце — самостоятельность: чем меньше тебе нужен мой контроль, тем выше план. Объём роликов задаёт базу, уровень определяет, насколько работа идёт без меня.</p>
+  <div class="plans" style="margin-top:18px">
+    <div class="card plan">
+      <p class="label">Минимальный</p>
+      <div class="price">40 000<span>₽</span></div>
+      <ul>
+        <li>Ролики личного бренда <b>30</b></li>
+        <li>Ролики WIKKI.OCEAN <b>20</b></li>
+        <li>Ролики VOLYO <b>20</b></li>
+        <li>Карусели: личный бренд <b>5</b></li>
+        <li>Карусели: компания <b>5</b></li>
+        <li>Карусели: приложение <b>5</b></li>
+        <li>LinkedIn <b>8 постов</b></li>
+      </ul>
+      <p class="extra">Пройдены недели обучения 1–2. Работа идёт под моим контролем, отчёт каждую неделю</p>
+    </div>
+    <div class="card plan">
+      <p class="label">Средний</p>
+      <div class="price">50 000<span>₽</span></div>
+      <ul>
+        <li>Ролики личного бренда <b>40</b></li>
+        <li>Ролики WIKKI.OCEAN <b>30</b></li>
+        <li>Ролики VOLYO <b>30</b></li>
+        <li>Карусели: личный бренд <b>7</b></li>
+        <li>Карусели: компания <b>7</b></li>
+        <li>Карусели: приложение <b>7</b></li>
+        <li>LinkedIn <b>12 постов</b></li>
+      </ul>
+      <p class="extra">Весь план обучения. С третьей недели сама собираешь ролики конвейера и ведёшь контент-план на неделю вперёд. Отчёты приходят вовремя без напоминаний</p>
+    </div>
+    <div class="card plan accent">
+      <p class="label">Максимальный</p>
+      <div class="price">60 000<span>₽</span></div>
+      <ul>
+        <li>Ролики личного бренда <b>50</b></li>
+        <li>Ролики WIKKI.OCEAN <b>40</b></li>
+        <li>Ролики VOLYO <b>40</b></li>
+        <li>Карусели: личный бренд <b>10</b></li>
+        <li>Карусели: компания <b>10</b></li>
+        <li>Карусели: приложение <b>10</b></li>
+        <li>LinkedIn <b>16 постов</b></li>
+      </ul>
+      <p class="extra">Больше вовлечённости: около 45 часов в неделю. Всё из среднего, плюс к концу месяца: контент-план на две недели вперёд, 7 из 10 сценариев за последние две недели утверждаю без переделки, два твоих предложения по росту на основе цифр взяты в работу</p>
+    </div>
+  </div>
+  <p class="note">Ролики считаются по Instagram; дубль в YouTube Shorts и TikTok входит в работу, но не считается отдельно. Ролик личного бренда не идёт в минус, если съёмка не пришла вовремя. Выполнение плана считаем по отчётам в последнюю неделю месяца.</p>
+</section>
+
+<section>
+  <p class="label">Отчётность</p>
+  <h2>Отчёты и цифры</h2>
+  <div class="grid g2">
+    <div class="card"><h3>Каждый день до 21:00</h3><small>Что сделано, что в работе, что мешает и как предлагаешь это решить</small></div>
+    <div class="card"><h3>Каждый понедельник до 12:00</h3><small>Что вышло за неделю со ссылками, цифры по площадкам, что сработало и что нет, план на неделю, выполнение плана месяца</small></div>
+  </div>
+  <div class="card">
+    <table class="tbl">
+      <thead><tr><th>Метрика</th><th>Где</th><th>Зачем</th></tr></thead>
+      <tbody>
+        <tr><td>Вышло роликов и постов</td><td data-l="где">все площадки</td><td data-l="зачем">выполнение плана</td></tr>
+        <tr><td>Охват и досмотры</td><td data-l="где">Instagram, TikTok, YouTube</td><td data-l="зачем">какие темы и форматы работают</td></tr>
+        <tr><td>Репосты и сохранения</td><td data-l="где">Instagram, LinkedIn</td><td data-l="зачем">главный сигнал роста</td></tr>
+        <tr><td>Новые подписчики</td><td data-l="где">все площадки</td><td data-l="зачем">цель: 17 000 к 15 февраля 2027</td></tr>
+        <tr><td>Заявки и вопросы о продуктах</td><td data-l="где">директ, комментарии</td><td data-l="зачем">связь контента с продажами</td></tr>
+        <tr><td>Выручка запуска</td><td data-l="где">каждый запуск</td><td data-l="зачем">результат в деньгах</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Охваты, подписчики и заявки в первый месяц записываем, а не сдаём: они зависят и от моих съёмок, и от алгоритмов. По этим цифрам поставим цели на стратегической сессии.</p>
+  </div>
+</section>
+
+<section>
+  <p class="label">Правила работы</p>
+  <h2>Как работаем</h2>
+  <div class="grid g2">
+    <div class="card"><h3>Сроки — это сроки</h3><small>Контент готов на согласование за 24 часа до выхода. Не успеваешь — говоришь заранее, а не в день публикации</small></div>
+    <div class="card"><h3>Проблема + решение</h3><small>С проблемой приходишь сразу с вариантом, как её решить</small></div>
+    <div class="card"><h3>Брендбук = закон</h3><small>У каждого направления свой стиль. Вопрос по оформлению задаёшь до того, как делаешь</small></div>
+    <div class="card"><h3>Инициатива</h3><small>Видишь, что ролик зашёл, — сразу предлагаешь продолжение</small></div>
+    <div class="card"><h3>Честно с цифрами</h3><small>Слабый результат показываешь так же открыто, как сильный</small></div>
+    <div class="card"><h3>Учёба — часть работы</h3><small>Около 2 часов в день на обучение по плану, в рабочее время</small></div>
+  </div>
+</section>
+
+<section>
+  <p class="label">Рост</p>
+  <h2>Ступени внутри компании</h2>
+  <div class="steps">
+    <div class="step"><i></i><div class="card"><h3>Ассистент</h3><small>Ведёшь контент по плану, учишься, отчитываешься цифрами</small></div></div>
+    <div class="step"><i></i><div class="card"><h3>Руководитель контента трёх направлений</h3><small>Сама ведёшь контент-план и цифры по трём направлениям, предлагаешь темы и форматы по данным, под тобой исполнители</small></div></div>
+    <div class="step"><i></i><div class="card accent"><h3>Директор по маркетингу</h3><small>Отвечаешь за рост аудитории и заявки в цифрах, участвуешь в запусках и стратегии компании</small></div></div>
+  </div>
+  <p class="note">Первый месяц работаем по этому профилю. Затем стратегическая сессия: итоги месяца, дальнейшая работа, условия перехода на следующую ступень и оплата.</p>
+</section>
+
+<section>
+  <p class="label">Конфиденциальность</p>
+  <h2>Данные и NDA</h2>
+  <div class="card">
+    <p>Данные клиентов и учеников, цифры компании и всё, что под NDA, остаются внутри работы и не попадают в публичные AI-чаты. Детали закрепим отдельным соглашением.</p>
+  </div>
+</section>
+
+<footer>WIKKI.OCEAN · внутренний документ · ноябрь 2026</footer>
+</main>
+</body>
+</html>
