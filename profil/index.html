@@ -20,7 +20,7 @@ main{max-width:860px;margin:0 auto;padding:88px 32px 120px}
 
 /* hero */
 .hero{text-align:center;margin-bottom:72px}
-.pill{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;border-radius:100px;border:1px solid var(--ring);background:var(--glass);box-shadow:0 0 18px -6px rgba(155,111,232,.4);margin-bottom:26px}
+.pill{display:inline-block;font-size:13.5px;font-weight:500;padding:8px 16px;border-radius:100px;border:1px solid var(--ring);background:var(--glass);box-shadow:0 0 18px -6px rgba(155,111,232,.4);margin-bottom:26px}
 @keyframes flow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 h1{display:inline-block;font-size:clamp(38px,6vw,56px);font-weight:900;line-height:1.02;letter-spacing:-.03em;text-transform:uppercase;background:linear-gradient(110deg,#FFFFFF 0%,#E8DFFF 18%,#C4A4FF 34%,#9B6FE8 48%,#C4A4FF 62%,#FFFFFF 78%,#E8DFFF 90%,#9B6FE8 100%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:flow 9s ease-in-out infinite;filter:drop-shadow(0 0 28px rgba(155,111,232,.22));padding-top:6px}
 @media (prefers-reduced-motion:reduce){h1{animation:none}}
@@ -31,7 +31,7 @@ h1{display:inline-block;font-size:clamp(38px,6vw,56px);font-weight:900;line-heig
 
 /* sections */
 section{margin-top:64px}
-.label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.label{font-size:14px;font-weight:500;letter-spacing:0;color:var(--muted);margin-bottom:8px}
 h2{text-wrap:balance;font-size:clamp(22px,3vw,28px);font-weight:800;letter-spacing:-.01em;text-transform:uppercase;line-height:1.15;margin-bottom:18px}
 p{color:var(--id);font-size:16px}
 p+p{margin-top:12px}
@@ -49,11 +49,11 @@ ul.list li{position:relative;padding-left:22px;color:var(--id);font-size:15.5px}
 ul.list li::before{content:"";position:absolute;left:4px;top:.62em;width:7px;height:7px;border-radius:50%;background:rgba(155,111,232,.7);box-shadow:0 0 10px rgba(155,111,232,.5)}
 ul.list b{color:var(--ivory)}
 .note{margin-top:14px;font-size:14px;color:var(--id2)}
-.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:4px 9px;border-radius:8px;border:1px dashed rgba(242,237,226,.18);margin-left:8px;vertical-align:middle}
+.tag{display:inline-block;font-size:12.5px;font-weight:500;color:var(--muted);padding:4px 9px;border-radius:8px;border:1px dashed rgba(242,237,226,.18);margin-left:8px;vertical-align:middle}
 
 /* tables */
 .tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:15px}
-.tbl th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;text-align:left;padding:0 14px 12px}
+.tbl th{font-size:13px;color:var(--muted);font-weight:500;text-align:left;padding:0 14px 12px}
 .tbl td{padding:14px;color:var(--id);border-top:1px solid var(--line);vertical-align:top}
 .tbl td:first-child{color:var(--ivory);font-weight:600}
 .tbl .num{text-align:center;white-space:nowrap}
@@ -94,7 +94,7 @@ footer{margin-top:80px;text-align:center;font-size:13px;color:var(--muted)}
   .step{grid-template-columns:36px 1fr;gap:12px}
   .step i{width:34px;height:34px;font-size:14px}
 }
-h2 .tag{display:block;width:fit-content;margin:10px 0 0;font-family:var(--mono);letter-spacing:.1em}
+h2 .tag{display:block;width:fit-content;margin:10px 0 0;text-transform:none;letter-spacing:0}
 /* темнее: фиолетовый только намёком */
 .o1{opacity:.75}.o2{opacity:.7}
 h1{filter:drop-shadow(0 0 22px rgba(155,111,232,.18))}
@@ -121,14 +121,16 @@ body{background:transparent}
 <header class="hero">
   <div class="pill">Внутренний документ</div><br>
   <h1>Профиль роли</h1>
-  <p class="sub">Ассистент · контент и задачи трёх направлений</p>
+  <p class="sub">Ассистент · контент-завод трёх направлений</p>
 </header>
 
 <section>
   <p class="label">Описание роли</p>
   <h2>Ассистент</h2>
   <div class="card accent">
-    <p>Ассистент ведёт контент трёх направлений: личного бренда Виктории Гладышевой, компании WIKKI.OCEAN и приложения VOLYO. Готовит сценарии, монтирует и публикует ролики, делает карусели, ведёт контент-план, собирает цифры по площадкам. Выполняет мои поручения и техническую часть: разобраться в сервисе, настроить, довести небольшую задачу до результата и предложить, как сделать лучше.</p>
+    <p>Ассистент управляет контент-заводом трёх направлений: личного бренда Виктории Гладышевой, компании WIKKI.OCEAN и приложения VOLYO.</p>
+    <p>В каждый процесс завода мы встраиваем искусственный интеллект. Задача ассистента не делать всё руками, а управлять процессами: ставить задачу AI, проверять результат, доводить до публикации и предлагать, где ещё AI заберёт рутину.</p>
+    <p>Готовит сценарии, монтирует и публикует ролики, делает карусели, ведёт контент-план, собирает цифры по площадкам. Выполняет мои поручения и техническую часть: разобраться в сервисе, настроить, довести небольшую задачу до результата и предложить, как сделать лучше.</p>
     <p>Роль с ростом до руководителя контента трёх направлений.</p>
   </div>
 </section>
